@@ -1,0 +1,23 @@
+{
+  "version": 2,
+  "dgSpecHash": "gGy5qxnyLMI=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\brand\\source\\repos\\proyectos uni\\Resumidor_IA\\src\\TextMind\\TextMind.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\brand\\.nuget\\packages\\microsoft.extensions.ai\\10.6.0\\microsoft.extensions.ai.10.6.0.nupkg.sha512",
+    "C:\\Users\\brand\\.nuget\\packages\\microsoft.extensions.ai.abstractions\\10.6.0\\microsoft.extensions.ai.abstractions.10.6.0.nupkg.sha512",
+    "C:\\Users\\brand\\.nuget\\packages\\microsoft.extensions.ai.ollama\\9.7.0-preview.1.25356.2\\microsoft.extensions.ai.ollama.9.7.0-preview.1.25356.2.nupkg.sha512",
+    "C:\\Users\\brand\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\10.0.8\\microsoft.extensions.caching.abstractions.10.0.8.nupkg.sha512",
+    "C:\\Users\\brand\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\10.0.8\\microsoft.extensions.dependencyinjection.abstractions.10.0.8.nupkg.sha512",
+    "C:\\Users\\brand\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\10.0.8\\microsoft.extensions.logging.abstractions.10.0.8.nupkg.sha512",
+    "C:\\Users\\brand\\.nuget\\packages\\microsoft.extensions.primitives\\10.0.8\\microsoft.extensions.primitives.10.0.8.nupkg.sha512",
+    "C:\\Users\\brand\\.nuget\\packages\\system.diagnostics.diagnosticsource\\10.0.8\\system.diagnostics.diagnosticsource.10.0.8.nupkg.sha512",
+    "C:\\Users\\brand\\.nuget\\packages\\system.io.pipelines\\10.0.8\\system.io.pipelines.10.0.8.nupkg.sha512",
+    "C:\\Users\\brand\\.nuget\\packages\\system.net.http.json\\8.0.1\\system.net.http.json.8.0.1.nupkg.sha512",
+    "C:\\Users\\brand\\.nuget\\packages\\system.numerics.tensors\\10.0.8\\system.numerics.tensors.10.0.8.nupkg.sha512",
+    "C:\\Users\\brand\\.nuget\\packages\\system.text.encodings.web\\10.0.8\\system.text.encodings.web.10.0.8.nupkg.sha512",
+    "C:\\Users\\brand\\.nuget\\packages\\system.text.json\\10.0.8\\system.text.json.10.0.8.nupkg.sha512",
+    "C:\\Users\\brand\\.nuget\\packages\\system.threading.channels\\10.0.8\\system.threading.channels.10.0.8.nupkg.sha512"
+  ],
+  "logs": []
+}

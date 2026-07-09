@@ -1,0 +1,121 @@
+@model TextMind.Models.TextMindViewModel
+@{
+    ViewData["Title"] = "TextMind";
+}
+
+<div class="container">
+
+    <header class="text-center mb-4">
+        <h1 class="app-title">TextMind Resumidor de texto</h1>
+
+        <div class="info-bar">
+            <span>🤖 <strong>@Model.Model</strong></span>
+            <span>🌐 @Model.BaseUrl</span>
+        </div>
+    </header>
+
+    <form method="post" asp-action="Index" id="promptForm">
+
+        <div class="mb-3">
+            <label for="selectedTechnique" class="label-text">
+                Técnica de Resumen
+            </label>
+
+            <select id="selectedTechnique"
+                    name="selectedTechnique"
+                    class="form-select modern-input">
+                @foreach (var technique in Model.AvailableTechniques)
+                {
+                    <option value="@technique"
+                            selected="@(technique == Model.SelectedTechnique)">
+                        @technique
+                    </option>
+                }
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label for="query" class="label-text">
+                Consulta
+            </label>
+
+            <textarea id="query"
+                      name="query"
+                      class="modern-input"
+                      rows="5"
+                      placeholder="Escribe aquí tu consulta...">@Model.Query</textarea>
+        </div>
+
+        <button type="submit" id="submitButton" class="btn"> 
+            <span id="submitText">Ejecutar</span>
+
+            <span id="submitSpinner"
+                  class="spinner-border spinner-border-sm d-none"
+                  role="status"></span>
+                 <button type="button" class="btn btn-secondary" onclick="clearForm()">
+
+    Limpiar
+
+        </button>
+        <script>
+    function clearForm() {
+        document.getElementById("query").value = "";
+        document.getElementById("selectedTechnique").selectedIndex = 0;
+    }
+
+</script>
+
+    </form>
+
+    @if (!string.IsNullOrEmpty(Model.Error))
+    {
+        <div class="alert alert-danger mt-4">
+            <strong>Error:</strong> @Model.Error
+        </div>
+    }
+
+
+    <script>
+
+    function clearForm() {
+        const confirmClear = confirm("¿Seguro que quieres limpiar todo el contenido?");
+
+        if (!confirmClear) {
+            return;
+        }
+
+        document.getElementById("query").value = "";
+        document.getElementById("selectedTechnique").selectedIndex = 0;
+
+        // limpiar resultados si existen
+        const result = document.querySelector(".result-box");
+        if (result) result.remove();
+
+        const error = document.querySelector(".alert-danger");
+        if (error) error.remove();
+    }
+
+</script>
+
+    @if (!string.IsNullOrEmpty(Model.Response))
+    {
+        <div class="result-box">
+            <strong>Respuesta (@Model.SelectedTechnique):</strong>
+            <hr />
+            @Model.Response
+        </div>
+    }
+
+</div>
+
+@section Scripts {
+<script>
+    document.getElementById("promptForm").addEventListener("submit", function () {
+        const button = document.getElementById("submitButton");
+        button.disabled = true;
+
+        document.getElementById("submitText").textContent = "Procesando...";
+        document.getElementById("submitSpinner").classList.remove("d-none");
+    });
+</script>
+}
